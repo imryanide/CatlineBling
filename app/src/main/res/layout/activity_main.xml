@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/spacewallpaper"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/headingcat"
+        android:layout_width="320dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="42dp"
+        android:layout_marginBottom="307dp"
+        android:gravity="center"
+        android:text="@string/what_da_cat_doin"
+        android:textAlignment="center"
+        android:textColor="#6aec93"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/emoji"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/sillyCat"
+        android:layout_width="136dp"
+        android:layout_height="126dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="124dp"
+        android:layout_marginBottom="307dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/findOut"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.051"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/sillycat" />
+
+    <Button
+        android:id="@+id/findOut"
+        android:layout_width="wrap_content"
+        android:layout_height="99dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="60dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginBottom="48dp"
+        android:text="@string/find_out"
+        android:textAllCaps="false"
+        android:textSize="32sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sillyCat" />
+
+    <ImageSwitcher
+        android:id="@+id/catImageSwitcher"
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="60dp"
+        android:layout_marginBottom="147dp"
+        app:layout_constraintBottom_toTopOf="@+id/emoji"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/headingcat"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageView
+        android:id="@+id/emoji"
+        android:layout_width="147dp"
+        android:layout_height="156dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="140dp"
+        android:visibility="invisible"
+        app:srcCompat="@drawable/emoji" />
+
+
+</RelativeLayout>
