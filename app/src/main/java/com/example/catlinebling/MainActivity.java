@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
         sillyCat = (ImageView) findViewById(R.id.sillyCat);
         emojiView = (ImageView) findViewById(R.id.emoji);
 
-       
+
 
         imageSwitcher.setFactory(new ViewSwitcher.ViewFactory() {
             @Override
