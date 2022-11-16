@@ -7,6 +7,7 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.view.animation.LinearInterpolator;
 import android.view.animation.RotateAnimation;
+import android.view.animation.TranslateAnimation;
 import android.widget.Button;
 import android.widget.ImageSwitcher;
 import android.widget.ImageView;
@@ -43,6 +44,16 @@ public class MainActivity extends AppCompatActivity {
         sillyCat = (ImageView) findViewById(R.id.sillyCat);
         emojiView = (ImageView) findViewById(R.id.emoji);
 
+        RotateAnimation rotanim = new RotateAnimation(0.0f,360.0f, Animation.RELATIVE_TO_SELF,0.5f,Animation.RELATIVE_TO_SELF,0.5f);
+        rotanim.setInterpolator(new LinearInterpolator());
+        rotanim.setRepeatCount(Animation.INFINITE);
+        rotanim.setDuration(1000);
+
+        Animation animSurp = new TranslateAnimation(sillyCat.getLeft(),sillyCat.getLeft()+150,sillyCat.getTop(),sillyCat.getTop());
+        animSurp.setDuration(1000);
+        animSurp.setFillAfter(true);
+        animSurp.setFillEnabled(true);
+
 
 
         imageSwitcher.setFactory(new ViewSwitcher.ViewFactory() {
@@ -72,22 +83,29 @@ public class MainActivity extends AppCompatActivity {
                     imageSwitcher.setImageResource(R.drawable.catmeowing);
                     findButton.setText(R.string.hellyea);
 
-                    hotlineMP.setVolume(25.0F, 25.0F);
+                    hotlineMP.setVolume(45.0F, 45.0F);
                     hotlineMP.start();
                     hotlineMP.setLooping(true);
 
-                    meowMP.setVolume(80.0F,80.0F);
+                    meowMP.setVolume(10.0F,10.0F);
                     meowMP.start();
                     meowMP.setLooping(true);
 
+                    emojiView.startAnimation(rotanim);
+                    sillyCat.startAnimation(animSurp);
 
                     isMeowing  = true;
                 }
                 else{
                     headText.setText(R.string.what_da_cat_doin);
                     headText.setAllCaps(false);
+
+                    emojiView.clearAnimation();
+                    sillyCat.clearAnimation();
+
                     sillyCat.setVisibility(View.INVISIBLE);
                     emojiView.setVisibility(View.INVISIBLE);
+
                     imageSwitcher.setImageResource(R.drawable.catserious);
                     findButton.setText(R.string.what_da_cat_doin);
 
