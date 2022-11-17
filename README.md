@@ -1,7 +1,11 @@
 # Catline Bling
+A simple app I made to learn how to make apps, for recreational purposes. \
+Need to fix and refactor a lot of things, but ehh it's funny.
+***
+
 you used to call meow on my cellphone \
 late night when you need meow love \
-call me on my cell phone \
+call meow on my cell phone \
 late night when you need meow love \
 and i know when that catline bling \
 that can only meow one thing \
