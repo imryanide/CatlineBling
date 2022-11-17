@@ -51,7 +51,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginStart="60dp"
         android:layout_marginEnd="60dp"
-        android:layout_marginBottom="48dp"
+        android:layout_marginBottom="28dp"
         android:text="@string/find_out"
         android:textAllCaps="false"
         android:textSize="32sp"
@@ -71,6 +71,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/headingcat"
         app:layout_constraintVertical_bias="1.0" />
+
+    <VideoView
+        android:id="@+id/explosion"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:visibility="invisible" />
 
     <ImageView
         android:id="@+id/emoji"
