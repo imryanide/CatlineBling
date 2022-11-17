@@ -25,9 +25,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
     boolean isMeowing = false;
+    boolean isThanking = false;
     ImageSwitcher imageSwitcher;
     Button findButton;
     TextView headText;
+    TextView thankText;
     ImageView sillyCat;
     ImageView emojiView;
     VideoView explosionView;
@@ -52,9 +54,11 @@ public class MainActivity extends AppCompatActivity {
         imageSwitcher = (ImageSwitcher) findViewById(R.id.catImageSwitcher);
         findButton = (Button) findViewById(R.id.findOut);
         headText = (TextView) findViewById(R.id.headingcat);
+        thankText = (TextView) findViewById(R.id.thanks);
         sillyCat = (ImageView) findViewById(R.id.sillyCat);
         emojiView = (ImageView) findViewById(R.id.emoji);
         explosionView = (VideoView) findViewById(R.id.explosion);
+
 
 
         // Create animations for Emoji
@@ -111,7 +115,20 @@ public class MainActivity extends AppCompatActivity {
         // Initialize VideoPlayer
         explosionView.setVideoURI(Uri.parse("android.resource://com.example.catlinebling/"+R.raw.tallexplosion));
 
-
+        // Image Listener
+        headText.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(!isThanking){
+                    thankText.setVisibility(View.VISIBLE);
+                    isThanking = true;
+                }
+                else{
+                    thankText.setVisibility(View.INVISIBLE);
+                    isThanking = false;
+                }
+            }
+        });
 
         // Button Listener
         findButton.setOnClickListener(new View.OnClickListener() {

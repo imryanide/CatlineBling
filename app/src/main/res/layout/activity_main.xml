@@ -93,5 +93,18 @@
         android:visibility="invisible"
         app:srcCompat="@drawable/emoji" />
 
+    <TextView
+        android:id="@+id/thanks"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="83dp"
+        android:layout_marginBottom="-8dp"
+        android:text="@string/thanks"
+        android:textColor="#C9D2D0"
+        android:visibility="invisible" />
+
 
 </RelativeLayout>
